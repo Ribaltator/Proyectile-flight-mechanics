@@ -13,6 +13,7 @@ S_ref=0.5;%[m^2]
 Cd_0=0.2;%[-]
 mass=8;%[kg]
 
+
 %Velocidades iniciales en ejes
 v0x=arg_v0*cos(phi)*cos(theta);
 v0y=arg_v0*cos(phi)*sin(theta);
@@ -22,10 +23,11 @@ v0=[v0x v0y v0z];
 x_dir=[1 0 0];
 y_dir=[0 1 0];
 z_dir=[0 0 1];
+z0=pos0(3);
 
 %% Resultados
 
-out=sim(Balistica_Sim_vectorial);
+out=sim(Simulator);
 
 out.x=zeros(length(out.pos),1);
 out.y=zeros(length(out.pos),1);
