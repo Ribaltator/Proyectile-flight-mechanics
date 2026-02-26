@@ -1,12 +1,12 @@
 clear all
-%% Parametros de lanzamiento
+%% Launch parameterrs
 pos0=[0 0 500];%[m]
-theta=0;%[rad] Ángulo con el plano XZ
-phi=pi/4;%[rad] Ángulo con el plano XY 
+theta=0;%[rad] Direction angle
+phi=pi/4;%[rad] Elevation angle
 arg_v0=300;%[m/s]
 
 
-%% Datos iniciales
+%% Initial conditions
 g0=9.81;%[m/s^2]
 rho0=1.225;%[kg/m^3]
 S_ref=0.5;%[m^2]
@@ -14,7 +14,7 @@ Cd_0=0.2;%[-]
 mass=8;%[kg]
 
 
-%Velocidades iniciales en ejes
+%Simulator data
 v0x=arg_v0*cos(phi)*cos(theta);
 v0y=arg_v0*cos(phi)*sin(theta);
 v0z=arg_v0*sin(phi);
@@ -25,7 +25,7 @@ y_dir=[0 1 0];
 z_dir=[0 0 1];
 z0=pos0(3);
 
-%% Resultados
+%% Results
 
 out=sim(Simulator);
 
