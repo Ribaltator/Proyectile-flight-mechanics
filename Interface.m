@@ -1,5 +1,5 @@
 clear all
-%% Launch parameterrs
+%% Launch parameters
 pos0=[0 0 500];%[m]
 theta=0;%[rad] Direction angle
 phi=pi/4;%[rad] Elevation angle
@@ -96,3 +96,4 @@ xlabel('X (m)')
 ylabel('Y (m)')
 zlabel('Z (m)')
 axis equal
+
